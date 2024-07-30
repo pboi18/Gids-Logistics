@@ -1,6 +1,4 @@
-'use strict';
-
-
+"use strict";
 
 /**
  * navbar toggle
@@ -25,8 +23,6 @@ for (let i = 0; i < navLinks.length; i++) {
   });
 }
 
-
-
 /**
  * header
  */
@@ -43,3 +39,11 @@ window.addEventListener("scroll", function () {
     backTopBtn.classList.remove("active");
   }
 });
+
+function redirectToWhatsApp(event) {
+  event.preventDefault();
+  const message = document.getElementById("message").value;
+  const phoneNumber = "2349035775815";
+  const url = `https://wa.me/${phoneNumber}?text=%0AMessage:%20${message}`;
+  window.location.href = url;
+}

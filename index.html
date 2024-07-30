@@ -46,7 +46,10 @@
 
         <nav class="navbar" data-navbar>
           <div class="navbar-top">
-            <a href="#" class="logo">Transportio</a>
+            <a href="#" class="logo"
+              >GIDS
+              <p>LOGISTICS</p></a
+            >
 
             <button
               class="nav-close-btn"
@@ -447,13 +450,17 @@
             <div class="newsletter-content">
               <h2 class="h2 section-title">We Are Just A Message Away</h2>
 
-              <form action="" class="newsletter-form">
+              <form
+                onsubmit="redirectToWhatsApp(event)"
+                class="newsletter-form"
+              >
                 <input
                   type="message"
-                  name="email_address"
+                  id="message"
                   placeholder="Place Your Order"
                   aria-label="email"
                   class="email-field"
+                  required
                 />
 
                 <button type="submit" class="newsletter-btn">
